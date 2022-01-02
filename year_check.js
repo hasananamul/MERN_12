@@ -136,4 +136,8 @@ doller_convert.addEventListener("submit", (e) => {
   if (dollers.value == "") {
     doller_result.innerHTML = `<p class='text-light bg-danger p-1'> Please select any currency</p>`;
   }
+  let taka_pattern = /^[1-9]$/;
+  if (taka_pattern.test(doller_input.value) == false) {
+    doller_result.innerHTML = `<p class='text-light bg-danger p-1'> Please Input any Amount</p>`;
+  }
 });
