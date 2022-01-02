@@ -1,3 +1,6 @@
+/**
+ * Age verify scripit
+ */
 const form_1 = document.querySelector("#form_1");
 const my_name = document.querySelector("#name");
 const my_age = document.querySelector("#age");
@@ -12,7 +15,7 @@ my_name.addEventListener("keyup", () => {
   name_verify == false ? alert(`Please input only latter`) : "";
 });
 /**
- * age vaiue validation
+ * age form validation
  */
 my_age.onkeyup = () => {
   let age_verify_pattern = /^[0-9]{1,}$|(^$)/;
@@ -49,9 +52,11 @@ form_1.onsubmit = (e) => {
   }
 };
 
-// form validation with js
+/**
+ * Merrage verify script
+ */
 const form_2 = document.querySelector("#form_2");
-const name_input = document.querySelector("#form_2 #name");
+const name_input = document.querySelector("#form_2 #name_mrg");
 const number = document.querySelector("#form_2 #number");
 const output = document.querySelector("#output");
 const name_alert = document.querySelector("#form_2 .name_alert");
@@ -123,5 +128,12 @@ doller_convert.addEventListener("submit", (e) => {
       doller_input.value
     } Taka = ${doller_input.value * dollers.value} Euro</P>`;
   }
-  console.log(dollers.value);
+  if (dollers.value == 120) {
+    doller_result.innerHTML = `<P class=' text-center alert-info p-1'>${
+      doller_input.value
+    } Taka = ${doller_input.value * dollers.value} Pound</P>`;
+  }
+  if (dollers.value == "") {
+    doller_result.innerHTML = `<p class='text-light bg-danger p-1'> Please select any currency</p>`;
+  }
 });
