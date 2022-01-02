@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>MERN class_12 DOM</title>
+  </head>
+  <style>
+    .bg-dark {
+      background: linear-gradient(179deg, black, #ed2be7, #0b7f8b);
+    }
+    .text-primary {
+      color: azure !important;
+    }
+  </style>
+  <body>
+    <!-- form validation html -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div
+            class="w-75 m-auto mt-3 card card-body shadow text-center bg-dark"
+          >
+            <h2 class="text-info">Marriage age verify</h2>
+            <p class="text-primary">
+              Form validation with regular expression (name field only latter
+              suport) and not submit with any blank field or wrong field
+            </p>
+            <form id="form_2" class="" action="#" method="post">
+              <div class="name_alert"></div>
+              <input
+                class="w-75 p-1 mb-2"
+                placeholder="Enter name"
+                type="text"
+                name="Name"
+                id="name"
+              />
+              <input
+                class="w-75 p-1 mb-2"
+                placeholder="Birth Year"
+                type="number"
+                name="number"
+                id="number"
+              />
+              <input
+                id="submit"
+                class="mt-2 btn btn-success w-25"
+                type="submit"
+                value="Check"
+              />
+            </form>
+            <div id="output"></div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <!-- Age calculation -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div
+            class="w-75 m-auto mt-3 card card-body shadow text-center bg-dark"
+          >
+            <h3 class="text-info">Age calculation</h3>
+            <p class="text-primary">
+              Form validation with regular expression (Name field only latter
+              suport)
+            </p>
+            <div class="success"></div>
+            <form id="form_1" action="#" method="post" class="">
+              <input
+                id="name"
+                class="w-75 m-auto p-1"
+                type="text"
+                name="Name"
+                id="name"
+                value=""
+                placeholder="Your name"
+              />
+              <input
+                id="age"
+                class="w-75 p-1 m-auto mt-1"
+                type="text"
+                name="age"
+                value=""
+                placeholder="Year of Birth"
+              />
+              <input
+                id="submit"
+                class="mt-2 btn btn-success w-25"
+                type="submit"
+                value="Show Age"
+              />
+              <div class="mt-2" id="result"></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <!-- Dollers convertor to Taka -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div
+            class="w-75 m-auto mt-3 card card-body shadow text-center bg-dark"
+          >
+            <h2 class="text-info">---- Dollers convertor to Taka ----</h2>
+            <form
+              class="w-75 mb-2 m-auto"
+              id="doller_convert"
+              action="#"
+              method="get"
+            >
+              <input
+                class="w-75 form-control m-auto"
+                placeholder="Input Amount Taka"
+                type="number"
+                name="number"
+                id="doller_input"
+              />
+              <label for="doller" class="form-label"></label>
+              <select
+                style="appearance: auto"
+                class="form-control w-75 text-center m-auto"
+                name="doller"
+                id="doller"
+              >
+                <option value="">--Select Option--</option>
+                <option value="85">USD</option>
+                <option value="98">CAD</option>
+                <option value="100">URO</option>
+              </select>
+              <input
+                class="mt-2 btn btn-success"
+                type="submit"
+                value="Convert"
+              />
+            </form>
+            <div class="doller_result"></div>
+          </div>
+        </div>
+        <!--col-md-6-->
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <!-- Our JavaScript links connection -->
+    <script src="year_check.js"></script>
+    <script src="function.js"></script>
+  </body>
+</html>
